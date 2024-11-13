@@ -1,13 +1,25 @@
-# HousePricing_Challenge
-*Description*
+# House Pricing Prediction Using Machine Learning Pipelines
 
-Ask a home buyer to describe their dream house, and they probably won't begin with the height of the basement ceiling or the proximity to an east-west railroad. But this playground competition's dataset proves that much more influences price negotiations than the number of bedrooms or a white-picket fence.
-With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa, this competition challenges you to predict the final price of each home.
+> Description:
+In this project, I developed a machine learning pipeline to predict house prices using data from the Ames Housing dataset. This project, inspired by the Kaggle House Pricing competition, involved preparing the data, building a robust pipeline, and tuning a machine learning model for optimal performance.
 
-*Goal*
+## Key Features:
 
-It is your job to predict the sales price for each house. For each Id in the test set, you must predict the value of the SalePrice variable. 
+* Data Preparation:
+Performed preprocessing for both numerical and categorical data. Missing numerical values were handled using median imputation, while categorical values were imputed with the most frequent values.
+Categorical variables were one-hot encoded to make them suitable for modeling.
 
-*Metric*
+* Pipeline Construction:
+Implemented a pipeline using scikit-learn, which combines preprocessing and model fitting in a streamlined manner.
+Bundled the preprocessing steps with a RandomForestRegressor model, enabling consistent processing across training and validation sets.
 
-Submissions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. (Taking logs means that errors in predicting expensive houses and cheap houses will affect the result equally.)
+* Modeling and Evaluation:
+Trained a Random Forest model and evaluated its performance using Mean Absolute Error (MAE) as the primary metric.
+Achieved an MAE of approximately 17,862, with subsequent tuning to reduce error further.
+
+* Submission and Deployment:
+Prepared final predictions on the test set and saved them in a format suitable for submission to the Kaggle competition.
+This structured pipeline allowed for easy adjustments and re-evaluation, contributing to iterative improvements in model accuracy.
+
+## Technologies Used:
+Python, scikit-learn, Pandas, Jupyter Notebook, Random Forest Regressor, OneHotEncoder
